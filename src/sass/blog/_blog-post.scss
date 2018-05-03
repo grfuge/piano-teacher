@@ -1,0 +1,57 @@
+.content {
+  display: flex;
+  &--post {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include screenMedium {
+      padding-top: 96px;
+      padding-bottom: 64px;
+      padding-left: 48px;
+    }
+    .entry {
+      line-height: 1.6rem;
+      text-align: initial;
+      padding-bottom: 32px;
+      position: relative;
+      @include line-break;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-align: initial;
+      }
+      li {
+        line-height: 1.6rem;
+      }
+      div {
+        padding: 4px 0;
+      }
+    }
+    .comments {
+      padding-top: 32px;
+    }
+    a {
+      font-weight: 400;
+      color: $color-blue-1;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.page--return {
+  position: absolute;
+  font-weight: 400;
+  color: $color-blue-1;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

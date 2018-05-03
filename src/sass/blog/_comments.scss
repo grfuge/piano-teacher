@@ -1,0 +1,84 @@
+.comment-list {
+  list-style-type: none;
+  .comment-body {
+    margin-bottom: 32px;
+    position: relative;
+    &:after {
+      content: "";
+      width: 2px;
+      height: calc(100%);
+      background: $color-blue-dark;
+      position: absolute;
+      left: -32px;
+      top: 0;
+    }
+    p {
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+    a {
+      text-decoration: none;
+      color: $color-blue-dark;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.comment-respond {
+  a {
+    text-decoration: none;
+    color: $color-blue-dark;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .submit {
+    border: none;
+    display: inline-block;
+    margin-top: 0;
+    text-decoration: none;
+    color: #fff;
+    background: $color-blue-3;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 80ms;
+    &:hover {
+      background: $color-blue-dark;
+      cursor: pointer;
+    }
+  }
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    @include screenMedium {
+      padding-left: 32px;
+    }
+    &-author,
+    &-email,
+    &-url {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 12px 0;
+      width: 304px;
+      @include screenSmall {
+        width: 320px;
+      }
+    }
+    &-comment {
+      display: flex;
+      flex-direction: column;
+      textarea {
+        box-sizing: border-box;
+        resize: none;
+        width: 304px;
+        @include screenSmall {
+          width: 320px;
+        }
+      }
+    }
+  }
+}

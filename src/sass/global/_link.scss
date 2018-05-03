@@ -1,0 +1,13 @@
+.link {
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+  color: #fff;
+  background: $color-blue-3;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 80ms;
+  &:hover {
+    background: $color-blue-dark;
+  }
+}

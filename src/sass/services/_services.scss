@@ -1,0 +1,58 @@
+.services {
+  padding-top: 48px;
+  &:last-of-type {
+    margin-bottom: 64px;
+  }
+  &--intro {
+    margin: 48px auto;
+    position: relative;
+    width: calc(100% - 64px);
+    @include screenMedium {
+      width: calc(100% - 160px);
+    }
+    &:before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: -32px;
+      position: absolute;
+      background: $color-green;
+    }
+  }
+  &--flex {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    border: 0 solid #ddd;
+    margin: 8px auto;
+    flex-wrap: wrap;
+    @include screenLarge {
+      margin: 16px auto;
+      flex-wrap: nowrap;
+    }
+    &--item {
+      box-sizing: border-box;
+      padding: 16px 64px;
+      position: relative;
+      max-width: 420px;
+      @include screenLarge {
+        &:last-of-type {
+          &:after {
+            display: none;
+          }
+        }
+        &:after {
+          content: "";
+          width: 1px;
+          height: calc(100% - 128px);
+          top: 64px;
+          right: 0;
+          position: absolute;
+          background: #ddd;
+        }
+      }
+    }
+  }
+}

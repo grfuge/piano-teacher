@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway";
+  padding-top: 56px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  font-weight: 400;
+}
+
+p,
+li,
+q {
+  line-height: 1.6rem;
+}
+
+img {
+  display: block;
+}
+
+.active {
+  background: $color-blue-dark-2;
+}

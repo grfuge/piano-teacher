@@ -1,0 +1,32 @@
+.search-form {
+  &--label {
+    margin-bottom: 2px;
+  }
+  &--wrap {
+    display: flex;
+    &--search {
+      outline: none;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      padding: 0 8px;
+      width: 160px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &--img {
+      user-select: none;
+      outline: none;
+      display: inline-block;
+      padding: 6px;
+      background: #ddd;
+      height: 20px;
+      border: 1px solid #ddd;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      transition: background 100ms;
+      &:hover {
+        background: #d9d9d9;
+      }
+    }
+  }
+}

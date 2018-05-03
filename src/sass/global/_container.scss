@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  overflow: hidden;
+  @include screenSmall {
+    padding: 0 16px;
+  }
+  @include screenMedium {
+    box-sizing: border-box;
+    padding: 0 32px;
+  }
+  &-fill {
+    width: 100%;
+  }
+}
+
+.article {
+  max-width: 960px;
+}

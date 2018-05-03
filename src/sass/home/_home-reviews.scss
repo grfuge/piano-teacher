@@ -1,0 +1,83 @@
+.home-reviews {
+  padding-top: 48px;
+  padding-bottom: 80px;
+  position: relative;
+  @include line-break;
+  &--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--button {
+      user-select: none;
+      margin: 0 32px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      height: 36px;
+      width: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background 100ms;
+      position: absolute;
+      z-index: 100;
+      @include screenMedium {
+        margin: 0;
+        position: relative;
+        &:first-of-type {
+          left: 0;
+        }
+        &:last-of-type {
+          right: 0;
+        }
+      }
+      &:first-of-type {
+        left: -32px;
+      }
+      &:last-of-type {
+        right: -32px;
+      }
+      &:hover {
+        cursor: pointer;
+        background: #f3f3f3;
+      }
+      img {
+        display: block;
+      }
+    }
+    &--window {
+      text-align: center;
+      max-width: 640px;
+      position: relative;
+      overflow: hidden;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 32px;
+        left: 0;
+        top: 0;
+        @include backgroundGradient(#fff, rgba(0, 0, 0, 0));
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 32px;
+        top: 0;
+        right: 0;
+        @include backgroundGradient(rgba(0, 0, 0, 0), #fff);
+      }
+      &--wrap {
+        margin-left: 0;
+        width: 300%;
+        display: flex;
+        justify-content: flex-start;
+        div {
+          box-sizing: border-box !important;
+          padding: 0 32px !important;
+          width: 640px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@mixin line-break {
+  &:after {
+    content: "";
+    width: 30vw;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+}

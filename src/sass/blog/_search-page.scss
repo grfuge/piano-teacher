@@ -1,0 +1,9 @@
+.search {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  &--container {
+    box-sizing: border-box;
+    padding-top: 64px;
+    padding-left: 32px;
+  }
+}

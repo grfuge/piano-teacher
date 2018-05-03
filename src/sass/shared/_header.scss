@@ -1,0 +1,73 @@
+.header {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  height: 112px;
+  @include backgroundGradient($color-blue-1, $color-blue-2);
+  @include screenMedium {
+    height: 56px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  &--container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    @include screenMedium {
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+    @include screenLarge {
+      justify-content: space-evenly;
+    }
+    &--logo {
+      position: relative;
+      height: 56px;
+      @include screenMedium {
+        position: absolute;
+        left: 32px;
+      }
+      a {
+        line-height: 56px;
+        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
+        span {
+          letter-spacing: 0rem;
+          font-size: 1.5rem;
+          font-family: "La Belle Aurore";
+        }
+      }
+    }
+    &--items {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 56px;
+      @include screenMedium {
+        width: auto;
+        justify-content: flex-end;
+      }
+      a {
+        text-align: center;
+        user-select: none;
+        line-height: 56px;
+        padding: 0 0;
+        width: 100%;
+        transition: background 100ms;
+        @include screenMedium {
+          padding: 0 16px;
+          width: auto;
+        }
+        &:hover {
+          background: $color-blue-dark-2;
+        }
+      }
+    }
+  }
+}

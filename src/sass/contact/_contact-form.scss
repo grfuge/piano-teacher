@@ -1,0 +1,63 @@
+.contact-form {
+  position: relative;
+  margin: 0;
+  padding-bottom: 0;
+  width: 416px;
+  &--description {
+    position: relative;
+    max-width: 512px;
+    box-sizing: border-box;
+    padding-left: 32px;
+    margin: auto;
+    &:before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: $color-green;
+    }
+  }
+  &--form {
+    max-width: 512px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-bottom: 4px;
+    }
+    input {
+      margin-bottom: 16px;
+      padding: 5px;
+      font-size: 1rem;
+      font-family: "Raleway";
+      font-weight: 400;
+      outline: none;
+    }
+    textarea {
+      font-family: "Raleway";
+      padding: 5px;
+      resize: none;
+      font-size: 1rem;
+      outline: none;
+    }
+    &--submit {
+      color: #fff;
+      border: 0;
+      margin-top: 24px;
+      padding: 8px 1px !important;
+      width: 160px;
+      border: none;
+      display: inline-block;
+      text-decoration: none;
+      background: $color-blue-3;
+      border-radius: 4px;
+      transition: background 80ms;
+      &:hover {
+        background: $color-blue-dark;
+        cursor: pointer;
+      }
+    }
+  }
+}

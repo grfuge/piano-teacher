@@ -1,0 +1,14 @@
+.home-blog {
+  padding-top: 48px;
+  text-align: center;
+  position: relative;
+  overflow: visible !important;
+  padding-bottom: 96px;
+  background: #fff;
+  @include line-break;
+  max-width: 1000px;
+  &--list {
+    display: flex;
+    justify-content: center;
+  }
+}

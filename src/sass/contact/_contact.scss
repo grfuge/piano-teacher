@@ -1,0 +1,31 @@
+.contact {
+  @include line-break;
+  position: relative;
+  padding-bottom: 64px;
+  &--container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    &--info {
+      margin-top: 16px;
+      margin-bottom: 40px;
+      @include screenMedium {
+        margin-bottom: auto;
+        margin-right: 64px;
+      }
+    }
+  }
+}
+
+.map {
+  margin: 32px auto 32px auto;
+  height: 360px;
+  max-width: 720px;
+  background: #666;
+  @include screenMedium {
+    margin: 32px auto 96px auto;
+  }
+  &--title {
+    margin-top: 64px;
+  }
+}

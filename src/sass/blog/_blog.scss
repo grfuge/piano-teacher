@@ -1,0 +1,117 @@
+.prev-next-posts {
+  padding-left: 16px;
+  a {
+    color: #000;
+    background: #ddd;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    &:hover {
+      transition: background 100ms;
+      background: #d6d6d6;
+    }
+  }
+}
+
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 120px);
+  @include screenMedium {
+    flex-wrap: nowrap;
+  }
+  &--return {
+    transform: translateY(-32px);
+    position: absolute;
+    font-weight: 400;
+    color: $color-blue-1;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &--main {
+    padding-top: 32px !important;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    width: 100%;
+    @include screenMedium {
+      padding-top: 64px !important;
+      padding-bottom: 32px;
+      padding-left: 48px;
+    }
+    .blog-list {
+      box-sizing: border-box;
+      padding-left: 0;
+      padding-right: 16px;
+      margin-top: 64px;
+      margin-bottom: 64px;
+      display: block;
+      @include screenMedium {
+        padding-left: 0;
+        padding-right: 64px;
+        margin-top: 64px;
+      }
+      &--item {
+        width: 100%;
+        margin-left: 16px;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  &-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 0;
+    padding: 0;
+    &--item {
+      width: calc(100% - 32px);
+      box-sizing: border-box;
+      margin: 16px 0 16px 32px;
+      border-bottom: 0 solid #ddd;
+      position: relative;
+      @include screenLarge {
+        width: calc(50% - 56px);
+        margin: 16px 0 48px 0;
+      }
+      &:after {
+        content: "";
+        width: 2px;
+        height: calc(100% - 16px);
+        background: $color-blue-1;
+        position: absolute;
+        left: -32px;
+        top: 0;
+        transform: translateX(-0%);
+      }
+      a {
+        font-weight: 600;
+        color: $color-blue-1;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      p {
+        margin-top: 8px;
+      }
+      &--info {
+        font-size: 0.95rem;
+        a {
+          font-weight: 400;
+        }
+      }
+      &--link {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.home-contact {
+  padding-top: 48px;
+  padding-bottom: 0;
+  @include screenMedium {
+    padding-bottom: 112px;
+  }
+  &--container {
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+    &--info {
+      width: 100%;
+      padding-right: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      @include screenMedium {
+        width: auto;
+        transform: translateX(48px);
+      }
+      a {
+        margin-top: 40px;
+      }
+      tr {
+        line-height: 2.5rem;
+        &:last-of-type {
+          line-height: 1rem;
+        }
+        td {
+          img {
+            margin: auto;
+          }
+          &:last-of-type {
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+    &--map {
+      margin-top: 32px !important;
+      margin-bottom: 32px !important;
+      height: 300px !important;
+      width: 100% !important;
+      background: #666 !important;
+      @include screenMedium {
+        margin: 0 32px !important;
+        width: 40% !important;
+      }
+    }
+  }
+}
