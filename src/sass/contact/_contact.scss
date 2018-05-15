@@ -4,14 +4,20 @@
   padding-bottom: 64px;
   &--container {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
+    flex-wrap: nowrap;
     &--info {
-      margin-top: 16px;
+      text-align: left;
       margin-bottom: 40px;
       @include screenMedium {
         margin-bottom: auto;
         margin-right: 64px;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
       }
     }
   }

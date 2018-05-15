@@ -14,7 +14,7 @@ var gulp = require('gulp'),
 gulp.task('sync', function() {
   connect.server({}, function (){
     browserSync({
-      port: 80,
+      //port: 80,
       proxy: 'localhost/piano-teacher/public'
     });
   });

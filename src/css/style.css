@@ -538,15 +538,20 @@ img {
     transform: translateX(-50%); }
   .contact--container {
     display: flex;
-    align-items: flex-start;
-    justify-content: center; }
+    justify-content: center;
+    flex-wrap: nowrap; }
     .contact--container--info {
-      margin-top: 16px;
+      text-align: left;
       margin-bottom: 40px; }
       @media screen and (min-width: 768px) and (min-height: 480px) {
         .contact--container--info {
           margin-bottom: auto;
           margin-right: 64px; } }
+      .contact--container--info img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain; }
 
 .map {
   margin: 32px auto 32px auto;
